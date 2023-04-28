@@ -1,0 +1,17 @@
+.countryName {
+  font-size: 32px;
+  padding: 20px 0 20px 0;
+}
+
+.detailsContents {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  text-align: center;
+}
+
+.detailsData {
+  background-color: rgb(7, 7, 89);
+  border: 2px solid aqua;
+  padding: 10px;
+}

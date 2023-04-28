@@ -1,0 +1,74 @@
+.countryList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  gap: 30px 30px;
+}
+
+.countryItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 50px;
+  background-color: rgb(29, 184, 215);
+  color: rgb(7, 7, 89);
+}
+
+.countryItem button {
+  background-color: rgb(29, 184, 215);
+  color: rgb(7, 7, 89);
+  border: none;
+}
+
+.rightArrow {
+  cursor: pointer;
+}
+
+.backArrow {
+  background-color: rgb(29, 184, 215);
+  color: rgb(7, 7, 89);
+  border: none;
+  cursor: pointer;
+}
+
+.countryInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  gap: 30px 30px;
+}
+
+.countryInfoItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgb(29, 184, 215);
+  color: rgb(7, 7, 89);
+}
+
+/* Header Styling */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.searchContainer {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.searchContainer input {
+  padding: 10px;
+  width: 150px;
+  margin-right: 15px;
+}
+
+/* Footer Styling */
+
+footer {
+  text-align: center;
+}
