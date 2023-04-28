@@ -1,12 +1,10 @@
-import { Countries } from "./components/Countries";
-import Footer from "./components/Footer";
-// import Details from "./components/Details";
+import Countries from './components/Countries';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
       <Countries />
-      {/* <Details /> */}
       <Footer />
     </div>
   );

@@ -1,33 +1,42 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React from 'react';
+import '../styles/Details.css';
+import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
-function Details (countriesId) {
-    const { countries } = useSelector((state) => state.countries);
-    const selectedCountries = countries.find((cnty) => cnty.Combined_Key === countriesId);
-    
-    return (
-        <div>
-            <div>Last_Update:{selectedCountries.Last_Update}</div>
-            <div  className="app_details">
-                <div className="data">
-            <p>Confirmed cases:</p>
-                {selectedCountries.Confirmed}
-            </div>
-            <div className="data">
-            <p>Deaths:</p>
-            {selectedCountries.Deaths}
-            </div>
-            <div className="data">
-            <p>Recovered:</p>
-            {selectedCountries.Recovered}
-            </div>
-            <div className="data">
-            <p>Incident_Rate:</p>
-            {selectedCountries.Incident_Rate}
-            </div>
-            </div>
+function Details({ countriesId }) {
+  const { countries } = useSelector((state) => state.countries);
+  const country = countries.find((country) => country.Combined_Key === countriesId);
+
+  return (
+    <div>
+      <div className="countryName">
+        {country.Combined_Key}
+      </div>
+
+      <div className="detailsContents">
+        <div className="detailsData">
+          <span>Confirmed cases: </span>
+          {country.Confirmed}
         </div>
-    )
+        <div className="detailsData">
+          <span>Deaths: </span>
+          {country.Deaths}
+        </div>
+        <div className="detailsData">
+          <span>Incident Rate: </span>
+          {country.Incident_Rate}
+        </div>
+        <div className="detailsData">
+          <span>Last Update: </span>
+          {country.Last_Update}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Details;
+
+Details.propTypes = {
+  countriesId: PropTypes.string.isRequired,
+};
